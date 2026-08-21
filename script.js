@@ -1414,6 +1414,9 @@ May all your wishes come true today and forever.`,
           const storySections = document.getElementById('story-sections');
           storySections.classList.remove('hidden');
           storySections.style.animation = 'fadeInUp 1s ease-out';
+          
+          // Force resize so canvases (like Constellation) can compute their clientWidth properly
+          window.dispatchEvent(new Event('resize'));
         }, 600);
       });
 
