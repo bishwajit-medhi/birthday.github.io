@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday to My Universe ✨ | A Love Odyssey</title>
+  <meta name="description" content="An interactive, deeply romantic celestial birthday experience crafted with all my love.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-celestial">
+
+  <!-- Background Interactive Cosmos Canvas -->
+  <canvas id="cosmos-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Main Experience Wrapper -->
+  <main class="app-container">
+
+    <!-- ============================================ -->
+    <!-- 0. WELCOME GATE: The Enchanted Starlight Portal -->
+    <!-- ============================================ -->
+    <section class="welcome-portal" id="welcome-portal">
+      <div class="portal-glass-card">
+        <div class="constellation-heart-glow">
+          <svg viewBox="0 0 100 90" class="heart-svg">
+            <path d="M50,85 C50,85 10,55 10,25 C10,10 25,5 35,12 C45,19 50,28 50,28 C50,28 55,19 65,12 C75,5 90,10 90,25 C90,55 50,85 50,85 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 2"/>
+          </svg>
+          <div class="pulsing-core"></div>
+        </div>
+
+        <span class="portal-eyebrow">A Special Celestial Journey</span>
+        <h1 class="portal-title">Happy Birthday, <span class="glow-name wife-name-display">My Love</span></h1>
+        <p class="portal-subtitle">To the most breathtaking soul in my universe. I built this star-lit world just for you.</p>
+
+        <div class="portal-action">
+          <button class="enter-portal-btn" id="enter-portal-btn">
+            <span class="btn-sparkle">✨</span>
+            <span>Step Into Your Universe</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <span class="portal-hint">Turn up your volume for music & magical sounds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections (Revealed after entering) -->
+    <div class="story-sections hidden" id="story-sections">
+
+      <!-- Unified Master Navigation Header -->
+      <nav class="experience-nav" id="experience-nav">
+        <div class="nav-brand">
+          <span class="brand-sparkle">✦</span>
+          <span class="brand-text-wrap"><span class="wife-name-display">My Love</span>'s Birthday</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#cake-section">🎂 Cake</a></li>
+          <li><a href="#timeline-section">⏳ Timeline</a></li>
+          <li><a href="#constellation-section">✨ Stars</a></li>
+          <li><a href="#memories-section">📸 Memories</a></li>
+          <li><a href="#love-jar-section">💖 Reasons</a></li>
+          <li><a href="#love-letter-section">💌 Letter</a></li>
+          <li><a href="#gift-box-section">🎁 Gifts</a></li>
+          <li><a href="#finale-section">🎆 Wishes</a></li>
+        </ul>
+        <div class="nav-controls">
+          <button class="icon-btn highlight-gold" id="midnight-btn" title="Send SMS & Email at 12:00 AM">⏰ <span class="btn-text">12 AM Surprise</span></button>
+          <button class="audio-toggle-btn" id="audio-toggle-btn" title="Toggle Romantic Music">
+            <span class="music-icon">🎵</span>
+            <span class="music-bars">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span class="music-label">Music</span>
+          </button>
+          <button class="icon-btn" id="sfx-toggle-btn" title="Toggle Sound FX">✨ <span class="btn-text">SFX: On</span></button>
+          <button class="icon-btn" id="theme-btn" title="Change Theme Palette">🎨 <span class="btn-text">Theme</span></button>
+          <button class="icon-btn highlight" id="personalize-btn" title="Personalize Names, Letters & Photos">⚙️ <span class="btn-text">Personalize</span></button>
+        </div>
+      </nav>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 1: Interactive Birthday Cake Ceremony -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="cake-section">
+        <div class="section-badge">Chapter I • The Birthday Wish</div>
+        <h2 class="section-title">Make a Wish, Beautiful</h2>
+        <p class="section-desc">Click/tap each candle to blow it out, or turn on your mic to blow into the screen like real candles!</p>
+
+        <div class="cake-ceremony-container">
+          <div class="cake-3d-stage">
+            <!-- 3D Layered Birthday Cake -->
+            <div class="cake-wrapper" id="interactive-cake">
+              
+              <!-- Candle Row -->
+              <div class="candles-rack" id="candles-rack">
+                <!-- Dynamically generated or standard 3 glowing candles -->
+                <div class="candle" data-candle="1">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick c-gold"></div>
+                </div>
+
+                <div class="candle" data-candle="2">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick c-pink"></div>
+                </div>
+
+                <div class="candle" data-candle="3">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick c-purple"></div>
+                </div>
+              </div>
+
+              <!-- Cake Top Tier -->
+              <div class="cake-tier tier-top">
+                <div class="cake-frosting-top">
+                  <div class="strawberry s1">🍓</div>
+                  <div class="strawberry s2">✨</div>
+                  <div class="strawberry s3">🍓</div>
+                  <div class="cream-swirls"></div>
+                </div>
+                <div class="tier-side"></div>
+              </div>
+
+              <!-- Cake Middle Tier -->
+              <div class="cake-tier tier-mid">
+                <div class="tier-drips"></div>
+                <div class="tier-side">
+                  <span class="cake-banner-text">HAPPY BIRTHDAY</span>
+                </div>
+              </div>
+
+              <!-- Cake Base Tier -->
+              <div class="cake-tier tier-base">
+                <div class="tier-side">
+                  <div class="pearl-garland"></div>
+                </div>
+              </div>
+
+              <!-- Cake Stand Plate -->
+              <div class="cake-stand">
+                <div class="plate-top"></div>
+                <div class="plate-stem"></div>
+                <div class="plate-base"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cake Controls & Wish Status -->
+          <div class="cake-controls">
+            <div class="wish-banner" id="wish-banner">
+              <span class="wish-icon">🕯️</span>
+              <span id="wish-status-text">Blow out all the candles to release your birthday magic!</span>
+            </div>
+
+            <div class="cake-action-buttons">
+              <button class="glow-btn" id="blow-all-candles-btn">
+                <span>🌬️ Blow All Candles</span>
+              </button>
+              <button class="glass-btn" id="mic-blow-btn" title="Use your microphone to blow real breath">
+                <span>🎙️ <span id="mic-btn-text">Enable Mic Blow</span></span>
+              </button>
+              <button class="glass-btn" id="relight-cake-btn">
+                <span>🔥 Relight Candles</span>
+              </button>
+            </div>
+
+            <!-- Slice the Cake button (unlocked after blowing) -->
+            <div class="cake-slice-container hidden" id="cake-slice-container">
+              <button class="slice-btn" id="slice-cake-btn">
+                <span>🍰 Cut a Slice for You & Me!</span>
+              </button>
+              <div class="slice-message hidden" id="slice-message">
+                <p>✨ <em>"May your year ahead be as sweet, radiant, and wonderful as you make my life every single day."</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 2: Our Cosmic Timeline Counter        -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="timeline-section">
+        <div class="section-badge">Chapter II • Infinity & Beyond</div>
+        <h2 class="section-title">The Time I've Cherished You</h2>
+        <p class="section-desc">Every single second with you is my favorite second in the universe.</p>
+
+        <div class="timeline-glass-wrapper">
+          <div class="heartbeat-pulse-container">
+            <div class="heartbeat-ring ring-1"></div>
+            <div class="heartbeat-ring ring-2"></div>
+            <div class="heartbeat-icon">❤️</div>
+            <div class="heartbeat-subtext">Beating for you since <span id="anniversary-date-display">Our First Day</span></div>
+          </div>
+
+          <!-- Live Time Counter Grid -->
+          <div class="counter-grid" id="live-time-counter">
+            <div class="counter-card">
+              <span class="counter-num" id="count-years">0</span>
+              <span class="counter-label">Years</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" id="count-days">000</span>
+              <span class="counter-label">Days</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" id="count-hours">00</span>
+              <span class="counter-label">Hours</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" id="count-minutes">00</span>
+              <span class="counter-label">Minutes</span>
+            </div>
+            <div class="counter-card highlight-sec">
+              <span class="counter-num" id="count-seconds">00</span>
+              <span class="counter-label">Seconds</span>
+            </div>
+          </div>
+
+          <!-- Sweet Quantitative Milestones -->
+          <div class="sweet-metrics-row">
+            <div class="metric-item">
+              <span class="metric-icon">☕</span>
+              <span class="metric-value">10,000+</span>
+              <span class="metric-desc">Cups of coffee & sweet morning smiles</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-icon">😂</span>
+              <span class="metric-value">∞</span>
+              <span class="metric-desc">Uncontrollable midnight laughters</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-icon">🫂</span>
+              <span class="metric-value">Countless</span>
+              <span class="metric-desc">Warm hugs that feel like home</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-icon">🌟</span>
+              <span class="metric-value">1 & Only</span>
+              <span class="metric-desc">Soulmate in the entire galaxy</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 3: Constellation of Our Love          -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="constellation-section">
+        <div class="section-badge">Chapter III • Celestial Milestones</div>
+        <h2 class="section-title">The Constellation of Us</h2>
+        <p class="section-desc">Click on any glowing star in our celestial orbit to unlock our cherished moments.</p>
+
+        <div class="constellation-interactive-box">
+          <div class="constellation-canvas-wrapper">
+            <canvas id="constellation-canvas"></canvas>
+            <div class="constellation-guide">
+              <span>👆 Click stars to connect our story</span>
+              <button class="glass-btn small" id="reset-stars-btn">Reset Starmap</button>
+            </div>
+          </div>
+
+          <!-- Milestone Modal / Display Card -->
+          <div class="milestone-display-card" id="milestone-display-card">
+            <div class="milestone-icon" id="milestone-icon">🌟</div>
+            <h3 class="milestone-title" id="milestone-title">Select a Star</h3>
+            <span class="milestone-date" id="milestone-date">Cosmic Memory</span>
+            <p class="milestone-story" id="milestone-story">Touch or click any glowing star in the sky above to relive the moments that shaped our love story.</p>
+            <div class="milestone-sparkles">✦ ✦ ✦</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 4: 3D Memory Capsule & Polaroid Carousel -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="memories-section">
+        <div class="section-badge">Chapter IV • Captured Magic</div>
+        <h2 class="section-title">Our Memory Capsule</h2>
+        <p class="section-desc">Move your cursor over each polaroid for 3D tilt, or click to zoom in and relive the magic.</p>
+
+        <div class="polaroid-grid" id="polaroid-grid">
+          <!-- Memory 1 -->
+          <div class="polaroid-card" data-tilt>
+            <div class="polaroid-pin">📌</div>
+            <div class="polaroid-inner">
+              <div class="polaroid-img-box">
+                <img src="assets/memory1.jpg" alt="Under the Stars" class="memory-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">
+                <span class="caption-handwriting">Under the Starlight</span>
+                <span class="caption-sub">"My world got brighter with you"</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 2 -->
+          <div class="polaroid-card" data-tilt>
+            <div class="polaroid-pin">🌸</div>
+            <div class="polaroid-inner">
+              <div class="polaroid-img-box">
+                <img src="assets/memory2.jpg" alt="Golden Hour Moments" class="memory-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">
+                <span class="caption-handwriting">Golden Sunset Walks</span>
+                <span class="caption-sub">"Holding hands, lost in time"</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 3 -->
+          <div class="polaroid-card" data-tilt>
+            <div class="polaroid-pin">☕</div>
+            <div class="polaroid-inner">
+              <div class="polaroid-img-box">
+                <img src="assets/memory3.jpg" alt="Cozy Cafe Dates" class="memory-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">
+                <span class="caption-handwriting">Warm Coffee & Laughter</span>
+                <span class="caption-sub">"Your laugh is my favorite song"</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory 4 -->
+          <div class="polaroid-card" data-tilt>
+            <div class="polaroid-pin">🥂</div>
+            <div class="polaroid-inner">
+              <div class="polaroid-img-box">
+                <img src="assets/memory4.jpg" alt="Celebrating You" class="memory-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">
+                <span class="caption-handwriting">Celebrating My Queen</span>
+                <span class="caption-sub">"Here's to a lifetime of love"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-custom-actions">
+          <button class="glass-btn" id="upload-memory-btn">
+            <span>📷 Add Your Own Photos & Memories</span>
+          </button>
+          <input type="file" id="photo-file-input" accept="image/*" multiple style="display:none;">
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 5: 100 Reasons Why I Love You         -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="love-jar-section">
+        <div class="section-badge">Chapter V • Infinite Admiration</div>
+        <h2 class="section-title">The Jar of 100 Starlight Reasons</h2>
+        <p class="section-desc">Tap the magical glowing jar to pull out a starlight reason why you are so deeply loved.</p>
+
+        <div class="love-jar-container">
+          <!-- 3D Glass Jar -->
+          <div class="jar-interactive-stage" id="jar-stage">
+            <div class="glowing-glass-jar" id="glowing-jar">
+              <div class="jar-lid">
+                <div class="jar-cork"></div>
+                <div class="jar-ribbon"></div>
+              </div>
+              <div class="jar-body">
+                <div class="jar-glow-effect"></div>
+                <!-- Animated Floating Origami Stars Inside Jar -->
+                <div class="floating-origami-stars">
+                  <span class="o-star s1">⭐</span>
+                  <span class="o-star s2">✨</span>
+                  <span class="o-star s3">💖</span>
+                  <span class="o-star s4">🌟</span>
+                  <span class="o-star s5">⭐</span>
+                  <span class="o-star s6">💫</span>
+                  <span class="o-star s7">✨</span>
+                </div>
+                <div class="jar-label">
+                  <span>100 Reasons Why I Love You</span>
+                </div>
+              </div>
+            </div>
+            <button class="tap-jar-prompt" id="draw-reason-btn">
+              <span>✨ Tap to Draw a Reason</span>
+            </button>
+          </div>
+
+          <!-- Pulled Reason Card -->
+          <div class="drawn-reason-card" id="drawn-reason-card">
+            <div class="reason-card-header">
+              <span class="reason-num" id="reason-num-badge">Reason #1</span>
+              <button class="fav-heart-btn" id="fav-reason-btn" title="Save to Favorites">🤍</button>
+            </div>
+            <div class="reason-card-body">
+              <p class="reason-quote" id="reason-quote-text">"The way your eyes crinkle with pure joy whenever you laugh wholeheartedly."</p>
+            </div>
+            <div class="reason-card-footer">
+              <button class="draw-next-btn" id="draw-next-btn">Draw Another One ➜</button>
+              <button class="all-reasons-toggle" id="view-all-reasons-btn">View All 100 Reasons 📜</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 6: The Wax-Sealed Secret Love Letter  -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="love-letter-section">
+        <div class="section-badge">Chapter VI • Straight From My Heart</div>
+        <h2 class="section-title">A Letter For You</h2>
+        <p class="section-desc">Break the golden wax seal to open this secret envelope and read your birthday love letter.</p>
+
+        <div class="envelope-experience-wrapper">
+          <div class="envelope-3d-stage" id="envelope-stage">
+            
+            <!-- Envelope Element -->
+            <div class="envelope-box" id="envelope-box">
+              <div class="envelope-back"></div>
+              
+              <!-- The Letter Sheet (Slides up and unfolds) -->
+              <div class="letter-sheet" id="letter-sheet">
+                <div class="letter-paper-texture">
+                  <div class="letter-header">
+                    <span class="letter-date-heading" id="letter-date-heading">On Your Special Day</span>
+                    <span class="letter-salutation">My Dearest <span class="wife-name-display">Wife</span>,</span>
+                  </div>
+                  
+                  <div class="letter-body-text" id="typewriter-letter-content">
+                    <!-- Dynamic Typewriter Text will appear here -->
+                    <p class="typewriter-line">Happy Birthday to my dream come true, my best friend, and the eternal love of my life.</p>
+                  </div>
+
+                  <div class="letter-signature">
+                    <span>Forever & Always Yours,</span>
+                    <span class="signature-handwriting" id="husband-signature">Your Loving Husband ❤️</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Envelope Flap & Wax Seal -->
+              <div class="envelope-front"></div>
+              <div class="envelope-flap" id="envelope-flap"></div>
+              <div class="wax-seal" id="wax-seal" title="Click to break seal & open letter">
+                <div class="seal-inner">
+                  <span class="seal-initials">❤️</span>
+                </div>
+                <div class="seal-crack-lines"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="envelope-controls">
+            <button class="glow-btn" id="open-envelope-btn">
+              <span>💌 Break Seal & Read Letter</span>
+            </button>
+            <button class="glass-btn hidden" id="retype-letter-btn">
+              <span>✍️ Retype Letter</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 7: 3D Gift Box & Love Coupon Book     -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="gift-box-section">
+        <div class="section-badge">Chapter VII • Birthday Presents</div>
+        <h2 class="section-title">Unwrap Your Special Gift</h2>
+        <p class="section-desc">Pull the golden ribbon to open your birthday surprise box.</p>
+
+        <div class="gift-box-wrapper">
+          <div class="gift-box-stage" id="gift-box-stage">
+            <div class="gift-box-3d" id="gift-box-3d">
+              <div class="gift-lid" id="gift-lid">
+                <div class="ribbon-bow" id="ribbon-bow">
+                  <div class="bow-loop left"></div>
+                  <div class="bow-loop right"></div>
+                  <div class="bow-center"></div>
+                </div>
+                <div class="lid-top"></div>
+              </div>
+              <div class="gift-body" id="gift-body">
+                <div class="gift-ribbon-vertical"></div>
+                <div class="gift-ribbon-horizontal"></div>
+                <div class="gift-glow-inside"></div>
+              </div>
+            </div>
+            
+            <button class="pull-ribbon-btn" id="pull-ribbon-btn">
+              <span>🎀 Pull Ribbon to Open Box</span>
+            </button>
+          </div>
+
+          <!-- Unlocked Love Coupons (Revealed when open) -->
+          <div class="coupons-deck hidden" id="coupons-deck">
+            <h3 class="coupons-title">🎟️ Your Exclusive Birthday Love Vouchers</h3>
+            <p class="coupons-subtitle">Valid forever with zero expiration date! Tap "Redeem" to cash in anytime.</p>
+
+            <div class="coupon-cards-grid">
+              <!-- Coupon 1 -->
+              <div class="love-coupon" data-coupon-id="c1">
+                <div class="coupon-notch top"></div>
+                <div class="coupon-notch bottom"></div>
+                <div class="coupon-content">
+                  <div class="coupon-tag">VIP PASS</div>
+                  <h4 class="coupon-heading">👑 Queen For The Day</h4>
+                  <p class="coupon-desc">Breakfast in bed, zero chores, pampering, and whatever your heart desires all day long.</p>
+                  <button class="redeem-btn" onclick="app.redeemCoupon('c1')">Redeem Now ✨</button>
+                </div>
+                <div class="stamp-overlay">REDEEMED WITH LOVE</div>
+              </div>
+
+              <!-- Coupon 2 -->
+              <div class="love-coupon" data-coupon-id="c2">
+                <div class="coupon-notch top"></div>
+                <div class="coupon-notch bottom"></div>
+                <div class="coupon-content">
+                  <div class="coupon-tag">ROMANCE</div>
+                  <h4 class="coupon-heading">🕯️ Candlelight Dream Dinner</h4>
+                  <p class="coupon-desc">A five-star date night cooked with love or at your absolute favorite dream restaurant.</p>
+                  <button class="redeem-btn" onclick="app.redeemCoupon('c2')">Redeem Now ✨</button>
+                </div>
+                <div class="stamp-overlay">REDEEMED WITH LOVE</div>
+              </div>
+
+              <!-- Coupon 3 -->
+              <div class="love-coupon" data-coupon-id="c3">
+                <div class="coupon-notch top"></div>
+                <div class="coupon-notch bottom"></div>
+                <div class="coupon-content">
+                  <div class="coupon-tag">RELAXATION</div>
+                  <h4 class="coupon-heading">💆 Full Spa & Massage Night</h4>
+                  <p class="coupon-desc">Warm aromatherapy bath, full foot & back massage, soothing music, and pure bliss.</p>
+                  <button class="redeem-btn" onclick="app.redeemCoupon('c3')">Redeem Now ✨</button>
+                </div>
+                <div class="stamp-overlay">REDEEMED WITH LOVE</div>
+              </div>
+
+              <!-- Coupon 4 -->
+              <div class="love-coupon" data-coupon-id="c4">
+                <div class="coupon-notch top"></div>
+                <div class="coupon-notch bottom"></div>
+                <div class="coupon-content">
+                  <div class="coupon-tag">ADVENTURE</div>
+                  <h4 class="coupon-heading">✈️ Weekend Getaway Choice</h4>
+                  <p class="coupon-desc">You pick the destination, pack your favorite dress, and I take care of every single detail.</p>
+                  <button class="redeem-btn" onclick="app.redeemCoupon('c4')">Redeem Now ✨</button>
+                </div>
+                <div class="stamp-overlay">REDEEMED WITH LOVE</div>
+              </div>
+
+              <!-- Coupon 5 -->
+              <div class="love-coupon special-gold" data-coupon-id="c5">
+                <div class="coupon-notch top"></div>
+                <div class="coupon-notch bottom"></div>
+                <div class="coupon-content">
+                  <div class="coupon-tag">GOLDEN PASS</div>
+                  <h4 class="coupon-heading">🌟 The Wildcard Wish</h4>
+                  <p class="coupon-desc">Ask for absolutely anything in the universe, and my answer is unconditionally YES!</p>
+                  <button class="redeem-btn" onclick="app.redeemCoupon('c5')">Redeem Now ✨</button>
+                </div>
+                <div class="stamp-overlay">REDEEMED WITH LOVE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CHAPTER 8: Celestial Finale & Sky Lanterns    -->
+      <!-- ============================================ -->
+      <section class="story-chapter" id="finale-section">
+        <div class="section-badge">Finale • Infinite Wishes</div>
+        <h2 class="section-title">Light Up The Night Sky</h2>
+        <p class="section-desc">Click or tap anywhere on the sky to blast vibrant fireworks, or release a glowing sky lantern with your wish!</p>
+
+        <div class="lantern-interactive-box">
+          <div class="lantern-input-bar">
+            <input type="text" id="lantern-wish-input" placeholder="Type a birthday wish to send into the stars..." maxlength="60">
+            <button class="glow-btn" id="release-lantern-btn">
+              <span>🏮 Release Sky Lantern</span>
+            </button>
+          </div>
+
+          <div class="sky-tap-hint">
+            <span>✨ Tap anywhere on your screen for fireworks!</span>
+          </div>
+
+          <div class="grand-birthday-climax">
+            <h3 class="climax-heading">Happy Birthday, My Universe</h3>
+            <p class="climax-quote">"In every lifetime, across every galaxy, I would always search the stars to find you."</p>
+            <div class="infinity-symbol">∞</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="experience-footer">
+        <p>Crafted with endless love, adoration, and all my heart for <span class="wife-name-display">My Wife</span> ❤️</p>
+        <span class="footer-sub">Forever & Always • Happy Birthday</span>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- MODALS & OVERLAYS                           -->
+  <!-- ============================================ -->
+
+  <!-- Lightbox Modal for Photo Zoom -->
+  <div class="modal-overlay hidden" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="modal-close-btn" id="lightbox-close-btn">&times;</button>
+      <img src="" alt="Memory Preview" id="lightbox-img">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- All 100 Reasons Modal -->
+  <div class="modal-overlay hidden" id="reasons-modal">
+    <div class="reasons-modal-content">
+      <div class="modal-header">
+        <h3>💖 100 Reasons Why You Are My World</h3>
+        <button class="modal-close-btn" id="reasons-close-btn">&times;</button>
+      </div>
+      <div class="modal-search">
+        <input type="text" id="reason-search-input" placeholder="🔍 Search reasons...">
+      </div>
+      <div class="reasons-list-container" id="reasons-list-container">
+        <!-- 100 Reasons Rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Personalization Suite Drawer / Modal -->
+  <div class="modal-overlay hidden" id="personalize-modal">
+    <div class="personalize-drawer-content">
+      <div class="modal-header">
+        <h3>⚙️ Personalize Your Wife's Birthday Site</h3>
+        <button class="modal-close-btn" id="personalize-close-btn">&times;</button>
+      </div>
+      <div class="personalize-form">
+        
+        <div class="form-group">
+          <label>Wife's Full Name / Nickname:</label>
+          <input type="text" id="input-wife-name" placeholder="e.g., Emily, Sweetheart, My Queen">
+        </div>
+
+        <div class="form-group">
+          <label>Anniversary / First Met Date (For Live Counter):</label>
+          <input type="date" id="input-anniversary-date">
+        </div>
+
+        <div class="form-group">
+          <label>Husband's Signature Name:</label>
+          <input type="text" id="input-husband-name" placeholder="e.g., Your Husband, David">
+        </div>
+
+        <div class="form-group">
+          <label>Custom Love Letter Text:</label>
+          <textarea id="input-love-letter" rows="5" placeholder="Write your heartfelt letter here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Color Theme:</label>
+          <div class="theme-options-grid">
+            <button class="theme-select-btn active" data-theme="theme-celestial">🌌 Celestial Twilight</button>
+            <button class="theme-select-btn" data-theme="theme-rosegold">🌹 Rose Gold Dream</button>
+            <button class="theme-select-btn" data-theme="theme-emerald">👑 Emerald & Gold</button>
+            <button class="theme-select-btn" data-theme="theme-sunset">🌅 Sunset Romance</button>
+          </div>
+        </div>
+
+  <!-- Midnight Surprise Dispatcher Modal (Free SMS & Email at 12 AM) -->
+  <div class="modal-overlay hidden" id="midnight-modal">
+    <div class="personalize-drawer-content midnight-modal-content">
+      <div class="modal-header">
+        <h3>⏰ Midnight Surprise Dispatcher (12:00 AM)</h3>
+        <button class="modal-close-btn" id="midnight-close-btn">&times;</button>
+      </div>
+
+      <!-- Live Midnight Countdown Banner -->
+      <div class="midnight-countdown-box">
+        <span class="countdown-eyebrow">Countdown to 12:00:00 AM Midnight</span>
+        <div class="midnight-timer-row">
+          <div class="m-timer-unit">
+            <span class="m-timer-num" id="mid-hours">00</span>
+            <span class="m-timer-label">Hours</span>
+          </div>
+          <span class="m-timer-sep">:</span>
+          <div class="m-timer-unit">
+            <span class="m-timer-num" id="mid-minutes">00</span>
+            <span class="m-timer-label">Mins</span>
+          </div>
+          <span class="m-timer-sep">:</span>
+          <div class="m-timer-unit">
+            <span class="m-timer-num" id="mid-seconds">00</span>
+            <span class="m-timer-label">Secs</span>
+          </div>
+        </div>
+        <div class="auto-midnight-toggle-row">
+          <label class="toggle-switch">
+            <input type="checkbox" id="auto-midnight-checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label">🔔 Auto-Blast Fireworks & Sounds when 12:00 AM strikes!</span>
+        </div>
+      </div>
+
+      <div class="personalize-form">
+        <div class="form-group">
+          <label>Wife's Email Address (100% Free):</label>
+          <input type="email" id="input-wife-email" placeholder="e.g., wife@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label>Wife's Phone Number (for SMS & WhatsApp):</label>
+          <input type="tel" id="input-wife-phone" placeholder="e.g., +1234567890 (Include country code)">
+        </div>
+
+        <div class="form-group">
+          <label>Romantic Midnight Message (Pre-Filled with Website Link):</label>
+          <textarea id="input-midnight-message" rows="4" placeholder="Type your birthday midnight message..."></textarea>
+        </div>
+
+        <!-- Dispatch Action Buttons Grid -->
+        <div class="dispatcher-buttons-grid">
+          <button class="dispatch-btn email-btn" id="send-gmail-btn">
+            <span class="dispatch-icon">📧</span>
+            <div class="dispatch-text">
+              <strong>Send via Gmail (Free)</strong>
+              <small>Pre-filled & ready to Send / Schedule</small>
+            </div>
+          </button>
+
+          <button class="dispatch-btn whatsapp-btn" id="send-whatsapp-btn">
+            <span class="dispatch-icon">💬</span>
+            <div class="dispatch-text">
+              <strong>Send via WhatsApp (Free)</strong>
+              <small>1-Click instant message with link</small>
+            </div>
+          </button>
+
+          <button class="dispatch-btn sms-btn" id="send-sms-btn">
+            <span class="dispatch-icon">📱</span>
+            <div class="dispatch-text">
+              <strong>Send via Free SMS</strong>
+              <small>Opens native phone SMS app</small>
+            </div>
+          </button>
+
+          <button class="dispatch-btn direct-btn" id="send-direct-btn">
+            <span class="dispatch-icon">✨</span>
+            <div class="dispatch-text">
+              <strong>Instant Web Dispatch</strong>
+              <small>Firework celebration blast</small>
+            </div>
+          </button>
+        </div>
+
+        <div class="free-guide-callout">
+          💡 <strong>Pro Tip for 12:00 AM Auto-Delivery:</strong><br>
+          • <strong>Option A (Recommended)</strong>: Click <em>"Send via Gmail"</em> ➜ Click the arrow next to Send ➜ Choose <em>"Schedule Send for 12:00 AM"</em>.<br>
+          • <strong>Option B</strong>: Keep this website tab open before bed with the Auto-Blast toggle ON — it will celebrate and blast sounds at 12:00:00 AM!
+        </div>
+
+        <div class="form-actions">
+          <button class="glow-btn" id="save-midnight-details-btn">💾 Save Contact Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EmailJS Free SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- Main JavaScript App -->
+  <script src="script.js"></script>
+</body>
+</html>
