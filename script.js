@@ -1416,7 +1416,10 @@ May all your wishes come true today and forever.`,
           storySections.style.animation = 'fadeInUp 1s ease-out';
           
           // Force resize so canvases (like Constellation) can compute their clientWidth properly
-          window.dispatchEvent(new Event('resize'));
+          // A tiny delay guarantees the browser has processed the 'hidden' removal and updated clientWidth.
+          setTimeout(() => {
+            window.dispatchEvent(new Event('resize'));
+          }, 50);
         }, 600);
       });
 
